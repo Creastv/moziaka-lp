@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title> MOZAIKA Lesznowola | Twój dom z ogrodem już od 380 000 zł </title>
+    <meta name="description" content="Twój dom z ogrodem już od 380 000 zł">
+     <!-- 
+     <meta property="og:locale" content="pl_PL">
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="Pomarańczarnia | Wawrzyszewska 11 / Obozowa">
+     <meta property="og:url" content="??">
+     <meta property="og:site_name" content="Pomarańczarnia | Wawrzyszewska 11 / Obozowa">
+     <meta property="og:image" content="??/img/compartir.jpg">
+     <meta property="og:image:secure_url" content="??/img/compartir.jpg">
+     <meta property="og:image:width" content="1200">
+     <meta property="og:image:height" content="627">
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Pomarańczarnia | Wawrzyszewska 11 / Obozowa">
+     <meta name="twitter:image" content="??/img/compartir.jpg"> -->
+</head>
+<body>
+    
+    <main class="wraper">
+        <div class="row">
+            <div class="sidebar col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <div class="swiper-container swiper-wraper">
+                    <div class="swiper-wrapper swiper-slide-wraper">
+                      <div class="swiper-slide">
+                        <h3 ><b> MASZ PYTANIA ?</b></h3>
+                        <form name="contactForm" action="target.php" method="post" onsubmit="return validateForm()">
+                            <div class="input-group">
+                                <span class="ic person"></span>
+                                <input type="text" name="fName" placeholder="Imię i nazwisko">
+                                <div class="error" id="nameErr"></div>
+                            </div>
+                            <div class="input-group">
+                                <span class="ic email"></span>
+                                <input id="email" name="fEmail" type="text" placeholder="Adres email">
+                                <div class="error" id="emailErr"></div>
+                            </div>
+                            <div class="input-group">
+                                <span class="ic phone"></span>
+                                <input id="phone" type="text" name="fPhone" placeholder="Numer telefonu">
+                                <div class="error" id="phoneErr"></div>
+                            </div>
+                           
+                            <div class="check input-group">
+                                <label for="zgodaDane">
+                                    <input name="zgodaDane" id="zgodaDane" type="checkbox" class="zgoda" value="Wyrażam zgodę na przetwarzanie moich danych osobowych" />
+                                    <span id="zgodaWiecej">
+                                        Wyrażam zgodę na przetwarzanie moich danych osobowych  <a target="_blank" href="https://www.gemma.waw.pl/files/upload/PolitykaPrywatnosci.pdf">(więcej)</a>
+                                    </span>
+                                  <div class="error" id="zgodaDaneErr"></div>
+                                </label>
+                                <!-- <span id="zgodaWiecejDisplay" class="tooltip">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur alias tenetur voluptates repudiandae? Illo eum nobis praesentium, consequuntur quasi ipsum aperiam dignissimos alias. Nostrum corporis, ab rem enim molestiae ratione!</span> -->
+                            </div>
+                            <div class="check input-group">
+                                <label for="zgodaTel"> 
+                                    <input name="zgodaTel" id="zgodaTel" type="checkbox" class="zgoda"  value=" Wyrażam zgodę na otrzymywanie drogą telefoniczną informacje handlowe w tym marketingowe" />
+                                    <span id="zgodaWiecej2"> 
+                                        Wyrażam zgodę na otrzymywanie drogą telefoniczną informacje handlowe w tym marketingowe <a target="_blank" href="https://www.gemma.waw.pl/files/upload/PolitykaPrywatnosci.pdf">(więcej)</a>
+                                    </span>
+                                    <div class="error" id="zgodaTelErr"></div>
+                                </label>
+                                <!-- <span id="zgodaWiecejDisplay2" class="tooltip">Wyrażam zgodę na kontakt przez Gemma Inwestycje z siedzibą w Warszawie (KRS: 0000342035) na podany numer telefonu (wiadomości SMS i połączenia głosowe) oraz na przetwarzanie moich danych osobowych w celu przedstawiania ofert nabycia nieruchomości – szczegóły w <a target= href="https://www.gemma.waw.pl/files/upload/PolitykaPrywatnosci.pdf">Polityce Prywatności Gemma Inwestycje</a></span> -->
+                            </div>
+
+                            <div class="input-group">
+                                
+                                <button type="submit" id="submit" class="btn-send">WYŚLIJ <span class="ic arrow"></span></button>
+                            </div>
+                        </form>
+                        <ul>
+                            <li> <img src="img/ico-lokalizacja.png" alt="Prestiżowa lokalizacja"> <span><b>25 min</b> do Centrum<br>Warszawy</span></li>
+                            <li> <img src="img/ico-standard.png" alt="Wysoki standard"> <span>Duże ogrody <b>GRATIS</b></span></li>
+                            <li> <img src="img/ico-metro.png" alt="Metro Słodowiec"> <span>Poddasze od <b>35 m<sup>2</sup></b> w każdym domu!</span></li>
+                            <li> <img src="img/ico-park.png" alt="Park Stawy Kellera"> <span><b>Miejsce postojowe i garaże</b> <br>dla każdego domu!</span></li>
+                        </ul>
+                        <div class="links-btn">
+                            <a href="tel:501816586" class="link-btn" > <img src="img/ico-tel.png" alt=""> 501 816 586</a>
+                            <a href="https://www.gemma.waw.pl" class="link-btn" target="_blank">www.gemma.waw.pl</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Scroll Bar -->
+                <div class="swiper-scrollbar"></div>
+              </div> 
+            </div>
+            <div class="container col-lg-9 col-md-8 col-sm-8 col-xs-12 first-xs last-sm">
+                <div class="top-right-corner">
+                    <img class="logo" src="img/logo.jpg" alt="">
+                    <div class="grad">
+                        <div class="links-nav">
+                        <a href="https://www.facebook.com/gemmainwestycje/"  target="_blank"> <img src="img/ico-facebook.png" alt="Facebook"> <br>ZOBACZ <br> NA FB</a>
+                        <a href="#mapa"  class="jsModalTrigger"><img src="img/ico-loc.png" alt="Zobacz na mapie"> <br>ZOBACZ <br>NA MAPIE</a>
+                        <a href="img/plany.pdf" target="_blank"  ><img src="img/ico-pdf.png" alt="Pobierz plany"> <br>POBIERZ <br>PLANY</a>
+                        </div>
+                    </div>
+                </div>
+                <img class="badge" src="img/badge.png" alt="Zobacz film">
+                <img class="large-logo" src="img/logo-lg.png" alt="Zobacz film">
+                 <!-- Swiper -->
+                <div class="carousel" >
+                    <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url(img/bg.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg2.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg3.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg4.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg5.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg6.jpg)"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url(img/bg.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg2.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg3.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg4.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg5.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg6.jpg)"></div>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- google map    -->
+    <div id="mapa" class="modal">
+        <div class="modal__overlay jsOverlay"></div>
+        <div class="modal__container">
+            <div id="map"></div>
+            <button class="modal__close jsModalClose">&#10005;</button>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIXFTZ5TWh5sJutqQeoiXH3aNRScmIxBw&callback=initMap"></script>
+</body>
+</html>
