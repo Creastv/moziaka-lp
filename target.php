@@ -7,7 +7,7 @@ $date = date('d/m/Y');
 $name = $_POST['fName']; 
 $email = $_POST['fEmail']; 
 $phone = $_POST['fPhone']; 
-$local = $_POST['locallist'];
+
 $zgodaDane = $_POST['zgodaDane'];
 $zgodaTel = $_POST['zgodaTel'];
 
@@ -43,10 +43,6 @@ $zgodaTel = $_POST['zgodaTel'];
                       <td style='border-bottom:1px solid ;'>{$phone}</td>     
                     </tr>
                     <tr>
-                    <td style='border-bottom:1px solid ;' >Oferta:</td>
-                    <td style='border-bottom:1px solid ;'>{$local}</td>
-                  </tr>
-                    <tr>
                       <td style='border-bottom:1px solid ;' >Zgoda:</td>
                       <td style='border-bottom:1px solid ;'>{$zgodaDane}</td>     
                     </tr>
@@ -64,7 +60,7 @@ $zgodaTel = $_POST['zgodaTel'];
                   ";
 
 // Send
-mail("sylwiakropidlowska@gemma.waw.pl","Formularz z dnia:{$date}",$emailbody,$headers);
+mail("piotr@itholding.pl","Formularz z dnia:{$date}",$emailbody,$headers);
 // Send
 ?>
 <script type="text/javascript">

@@ -1,31 +1,119 @@
+// Form Validation
+function printError(elemId, hintMsg) {
+  document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+function validateForm() {
+  // Retrieving the values of form elements 
+  var name = document.contactForm.fName;
+  var email = document.contactForm.fEmail;
+  var phone = document.contactForm.fPhone;
+  var zgoda = document.contactForm.zgodaDane;
+  var zgoda2 = document.contactForm.zgodaTel;
+
+   
+    var nameErr = emailErr = phoneErr = zgodaDaneErr = zgodaTelErr =  true;
+    
+// Defining error variables with a default value
+  // Validate imie i nazwisko
+  if(name.value == "") {
+      printError("nameErr", "Wprowadź swóje imię i nazwisko.");
+      name.style.border = "1px solid red";
+  } else {
+      var regex = /^[a-zA-Z\s]+$/;                
+      if(regex.test(name.value) === false) {
+          printError("nameErr", "Wprowadź poprawne imienie i nazwisko.");
+      } else {
+          printError("nameErr", "");
+          name.style.border = "1px solid green";
+          nameErr = false;
+      }
+  }
+  // Validate email address
+  if(email.value == "") {
+      printError("emailErr", "Wprowadź swój adres email.");
+      email.style.border = "1px solid red";
+  } else {
+      // Regular expression for basic email validation
+      var regex = /^\S+@\S+\.\S+$/;
+      if(regex.test(email.value) === false) {
+          printError("emailErr", "Wprowdź poprawny adres email");
+      } else{
+          printError("emailErr", "");
+          email.style.border = "1px solid green";
+          emailErr = false;
+      }
+  }
+  // Validate phone number
+  if(phone.value == "") {
+      printError("phoneErr", "Wprowadź swój nr telefonu.");
+      phone.style.border = "1px solid red";
+  } else {
+      var regex = /^[1-9]\d{8}$/;
+      if(regex.test(phone.value) === false) {
+          printError("phoneErr", "Wprowadź poprawny nr telefonu.");
+      } else{
+          printError("phoneErr", "");
+          phone.style.border = "1px solid green";
+          phoneErr = false;
+      }
+  }
+
+
+  // Validate zgoda o przetwarzanie danych osobowych
+  if(!zgoda.checked) {
+    printError("zgodaDaneErr", "Pole wymagane.");
+    zgoda.style.border = "1px solid red";
+    zgodaDaneErr = true;
+  } else {
+    printError("zgodaDaneErr", "");
+    zgodaDaneErr = false;
+  }
+   // Validate zgoda o otrzymywanie droga tel informacji handlowych 
+  if(!zgoda2.checked) {
+    printError("zgodaTelErr", "Pole wymagane.");
+    zgodaTelErr = true;
+  } else {
+    printError("zgodaTelErr", "");
+    zgodaTelErr = false;
+  }
+  // Prevent the form from being submitted if there are any errors
+  if(( nameErr || emailErr || phoneErr || zgodaDaneErr || zgodaTelErr ) == true) {
+     return false;
+  }
+};
+
+
+
+
 var galleryThumbs = new Swiper('.gallery-thumbs', {
   spaceBetween: 3,
   slidesPerView: 6,
   breakpoints: {
-    '@0.00': {
-    slidesPerView: 3,
-    centeredSlides: true,
-    loop: true,
-    spaceBetween: 0,
-    },
-    '@0.75': {
-    slidesPerView: 3,
-    centeredSlides: true,
-    loop: true,
-    },
-    '@1.00': {
-    slidesPerView: 6,
-    },
-    '@1.50': {
-    slidesPerView: 6,
-    },
-}
+      '@0.00': {
+      slidesPerView: 3,
+      centeredSlides: true,
+      loop: true,
+      spaceBetween: 0,
+      },
+      '@0.75': {
+      slidesPerView: 3,
+      centeredSlides: true,
+      loop: true,
+      },
+      '@1.00': {
+      slidesPerView: 6,
+      },
+      '@1.50': {
+      slidesPerView: 6,
+      },
+  }
 });
+
 var galleryTop = new Swiper('.gallery-top', {
-//   spaceBetween: 10,
   loop:true,
   effect: 'fade',
-  loopedSlides: 6, //looped slides should be the same
+  loopedSlides: 6,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -33,8 +121,8 @@ var galleryTop = new Swiper('.gallery-top', {
   thumbs: {
     swiper: galleryThumbs,
   },
-
 });
+
 // Modals
 /* This script supports IE9+ */
 (function() {
@@ -142,101 +230,17 @@ var galleryTop = new Swiper('.gallery-top', {
           },
           mousewheel: true,
         });
-    
         window.onload = function() {
           document.querySelector("input").focus();
         }; 
+      } else {
       }
-    }
-
+     }
     var x = window.matchMedia("(max-width: 700px)")
     myFunction(x) 
     x.addListener(myFunction) 
+  
 
-// Form Validation
-function printError(elemId, hintMsg) {
-  document.getElementById(elemId).innerHTML = hintMsg;
-}
-
-function validateForm() {
-  // Retrieving the values of form elements 
-  var name = document.contactForm.fName;
-  var email = document.contactForm.fEmail;
-  var phone = document.contactForm.fPhone;
-
-  var zgoda = document.contactForm.zgodaDane;
-  var zgoda2 = document.contactForm.zgodaTel;
-
-   
-    var nameErr = emailErr = phoneErr = zgodaDaneErr = zgodaTelErr =  true;
-    
-// Defining error variables with a default value
-  // Validate imie i nazwisko
-  if(name.value == "") {
-      printError("nameErr", "Wprowadź swóje imię i nazwisko.");
-      name.style.border = "1px solid red";
-  } else {
-      var regex = /^[a-zA-Z\s]+$/;                
-      if(regex.test(name.value) === false) {
-          printError("nameErr", "Wprowadź poprawne imienie i nazwisko.");
-      } else {
-          printError("nameErr", "");
-          local.style.border = "1px solid green";
-          nameErr = false;
-      }
-  }
-  // Validate email address
-  if(email.value == "") {
-      printError("emailErr", "Wprowadź swój adres email.");
-      email.style.border = "1px solid red";
-  } else {
-      // Regular expression for basic email validation
-      var regex = /^\S+@\S+\.\S+$/;
-      if(regex.test(email.value) === false) {
-          printError("emailErr", "Wprowdź poprawny adres email");
-      } else{
-          printError("emailErr", "");
-          local.style.border = "1px solid green";
-          emailErr = false;
-      }
-  }
-  // Validate phone number
-  if(phone.value == "") {
-      printError("phoneErr", "Wprowadź swój nr telefonu.");
-      phone.style.border = "1px solid red";
-  } else {
-      var regex = /^[1-9]\d{8}$/;
-      if(regex.test(phone.value) === false) {
-          printError("phoneErr", "Wprowadź poprawny nr telefonu.");
-      } else{
-          printError("phoneErr", "");
-          local.style.border = "1px solid green";
-          phoneErr = false;
-      }
-  }
-
-  // Validate zgoda o przetwarzanie danych osobowych
-  if(!zgoda.checked) {
-    printError("zgodaDaneErr", "Pole wymagane.");
-    zgoda.style.border = "1px solid red";
-    zgodaDaneErr = true;
-  } else {
-    printError("zgodaDaneErr", "");
-    zgodaDaneErr = false;
-  }
-   // Validate zgoda o otrzymywanie droga tel informacji handlowych 
-  if(!zgoda2.checked) {
-    printError("zgodaTelErr", "Pole wymagane.");
-    zgodaTelErr = true;
-  } else {
-    printError("zgodaTelErr", "");
-    zgodaTelErr = false;
-  }
-  // Prevent the form from being submitted if there are any errors
-  if(( nameErr || emailErr || phoneErr || zgodaDaneErr || zgodaTelErr ) == true) {
-     return false;
-  }
-};
 
 
 
@@ -273,3 +277,5 @@ function initMap() {
   });
   infowindow.open(map,marker);
 }
+
+
