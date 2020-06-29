@@ -56,6 +56,10 @@ main.wraper{
             margin: 2.5vw 0;
             @media #{$md} {
                 font-size: 2vw;
+                margin: 0.5vw 0;
+            }
+            @media #{$md} {
+                font-size: 2vw;
                 margin: 15px 0;
             }
             @media #{$xs} {
@@ -465,6 +469,9 @@ main.wraper{
             -webkit-box-shadow:inset 0px 0px 0px 3px $main;
             -moz-box-shadow:inset 0px 0px 0px 3px $main;
             box-shadow:inset 0px 0px 0px 3px $main;
+            @media #{$lg} {
+                height: 80px;
+            }
             @media #{$md} {
                 height: 100px;
             }
