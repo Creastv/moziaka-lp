@@ -4,14 +4,14 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
   breakpoints: {
     '@0.00': {
     slidesPerView: 3,
-    // centeredSlides: true,
-    // loop: true,
+    centeredSlides: true,
+    loop: true,
     spaceBetween: 0,
     },
     '@0.75': {
     slidesPerView: 3,
-    // centeredSlides: true,
-    // loop: true,
+    centeredSlides: true,
+    loop: true,
     },
     '@1.00': {
     slidesPerView: 6,
@@ -24,11 +24,11 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
 var galleryTop = new Swiper('.gallery-top', {
 //   spaceBetween: 10,
   loop:true,
-//   effect: 'fade',
+  effect: 'fade',
   loopedSlides: 6, //looped slides should be the same
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
   thumbs: {
     swiper: galleryThumbs,
@@ -95,11 +95,42 @@ var galleryTop = new Swiper('.gallery-top', {
 
 // Media Query
     // zgoda1 tooltip
-    var zgodaWiecej = document.getElementById('zgodaWiecej');
+    var zgodaWiecej = document.getElementById('open-info');
+    var zgodaWiecejSpan = document.getElementById('open-info');
     var zgodaWiecejDisplay = document.getElementById('zgodaWiecejDisplay');
     // zgoda2 tooltip
     var zgodaWiecej2 = document.getElementById('zgodaWiecej2');
+    var zgodaWiecejSpan2 = document.getElementById('open-info2');
     var zgodaWiecejDisplay2 = document.getElementById('zgodaWiecejDisplay2');
+
+    zgodaWiecejSpan2.addEventListener('click', function(){
+
+      zgodaWiecejDisplay.style.display = 'none';
+      zgodaWiecejSpan.textContent = 'czytaj więcej';
+
+      if (zgodaWiecejDisplay2.style.display == 'block') {
+        zgodaWiecejDisplay2.style.display = 'none';
+        zgodaWiecejSpan2.textContent = 'czytaj więcej';
+      } else {
+        zgodaWiecejDisplay2.style.display = 'block';
+        zgodaWiecejSpan2.textContent = 'zwiń';
+        
+      }
+    });
+    zgodaWiecejSpan.addEventListener('click', function(){
+      zgodaWiecejDisplay2.style.display = 'none';
+      zgodaWiecejSpan2.textContent = 'czytaj więcej';
+
+      if (zgodaWiecejDisplay.style.display == 'block') {
+        zgodaWiecejDisplay.style.display = 'none';
+        zgodaWiecejSpan.textContent = 'czytaj więcej';
+      } else {
+        zgodaWiecejDisplay.style.display = 'block';
+        zgodaWiecejSpan.textContent = 'zwiń';
+        
+      }
+    });
+
     function myFunction(x) {
       if (!x.matches) { // If media query matches
         var swiper = new Swiper('.swiper-wraper', {
@@ -115,33 +146,6 @@ var galleryTop = new Swiper('.gallery-top', {
         window.onload = function() {
           document.querySelector("input").focus();
         }; 
-        // zgodaWiecej.addEventListener('mouseover', function(){
-        //   zgodaWiecejDisplay.style.display = 'block';
-        // });
-        // zgodaWiecej.addEventListener('mouseout', function(){
-        //   zgodaWiecejDisplay.style.display = 'none';
-        // });
-        
-        // zgodaWiecej2.addEventListener('mouseover', function(){
-        //   zgodaWiecejDisplay2.style.display = 'block';
-        // });
-        // zgodaWiecej2.addEventListener('mouseout', function(){
-        //   zgodaWiecejDisplay2.style.display = 'none';
-        // });
-      } else {
-        // zgodaWiecej.addEventListener('touchstart', function(){
-        //   zgodaWiecejDisplay.style.display = 'block';
-        // });
-        // zgodaWiecej.addEventListener('mouseout', function(){
-        //   zgodaWiecejDisplay.style.display = 'none';
-        // });
-        
-        // zgodaWiecej2.addEventListener('touchstart', function(){
-        //   zgodaWiecejDisplay2.style.display = 'block';
-        // });
-        // zgodaWiecej2.addEventListener('mouseout', function(){
-        //   zgodaWiecejDisplay2.style.display = 'none';
-        // });
       }
     }
 
@@ -238,7 +242,7 @@ function validateForm() {
 
 // Google map
 function initMap() {
-  var uluru = {lat: 52.2755167, lng: 20.9648318};
+  var uluru = {lat: 52.0981942, lng: 20.9903905};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: uluru,
@@ -250,8 +254,8 @@ function initMap() {
       '</div>'+
       '<img style="width:100%;" src="img/logo.jpg">'+
       '<div id="bodyContent">'+
-      '<h3>Wawrzyszewska 11, 01-162 Warszawa </h3>'+
-      '<a class="cta" href="https://www.google.pl/maps/place/Biuro+Sprzedaży+Mieszkań+Pomarańczarnia+Deweloper+Gemma/@52.2466629,20.9602282,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x0:0x3ec9a3a70588c25a!2sBiuro+Sprzedaży+Mieszkań+Pomarańczarnia+Deweloper+Gemma!8m2!3d52.2466596!4d20.9624169!3m4!1s0x471ecb7620cefbe7:0x3ec9a3a70588c25a!8m2!3d52.2466596!4d20.9624169" target="_blank">JAK DOJECHAĆ</a>'+
+      '<h3>ul. Jemiołuszki  / powiat piaseczyński,<br> gmina Lesznowola </h3>'+
+      '<a class="cta" href="https://www.google.es/maps/place/Jemiołuszki+40,+05-500,+Polska/@52.0979108,20.9903905,17z/data=!4m5!3m4!1s0x471931f008663b17:0x85f42e61126e6d05!8m2!3d52.0981909!4d20.990251" target="_blank">JAK DOJECHAĆ</a>'+
       '</div>'+
       '</div>';
 
@@ -262,9 +266,10 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: uluru,
     map: map,
-    title: 'Uluru (Ayers Rock)'
+    title: 'Mozaika Lesznowola'
   });
   marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
+  infowindow.open(map,marker);
 }

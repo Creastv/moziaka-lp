@@ -887,11 +887,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-family: "CenturyGothic-Bold";
 }
 
 p {
-  font-weight: 400;
+  font-family: "CenturyGothic";
   font-size: 12px;
 }
 
@@ -1198,39 +1198,10 @@ main.wraper .sidebar .swiper-slide-wraper {
   }
 }
 
-main.wraper .sidebar h1 {
-  font-weight: normal;
-  letter-spacing: 3.2px;
-  display: inline-block;
-  margin: 0px;
-  font-size: 53px;
-  font-size: 2.6vw;
-  color: #fff;
-  margin-top: 30px;
-}
-
-@media only screen and (max-width: 768px) {
-  main.wraper .sidebar h1 {
-    font-size: 41px;
-  }
-}
-
-main.wraper .sidebar h1 span {
-  font-size: 33px;
-}
-
-main.wraper .sidebar h2 {
-  background-color: #000;
-  display: inline-block;
-  padding: 10px;
-  margin: 0;
-  font-size: 36px;
-  color: #fff;
-}
-
 main.wraper .sidebar h3 {
   color: #157000;
   font-size: 28px;
+  letter-spacing: 1.2px;
   font-family: "CenturyGothic-Bold";
   font-size: 1.5vw;
   margin: 40px 0;
@@ -1272,7 +1243,7 @@ main.wraper .sidebar form .input-group .ic {
   background-position: center;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   main.wraper .sidebar form .input-group .ic {
     height: 40px;
   }
@@ -1298,7 +1269,7 @@ main.wraper .sidebar form .input-group input {
   color: #07ba31;
   background: #fff;
   border: 1px solid transparent;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "CenturyGothic";
   padding: 0 10px 0 42px;
   width: 100%;
   height: 50px;
@@ -1306,7 +1277,7 @@ main.wraper .sidebar form .input-group input {
   margin-bottom: 18px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   main.wraper .sidebar form .input-group input {
     height: 40px;
   }
@@ -1320,7 +1291,7 @@ main.wraper .sidebar form .input-group input:focus {
 }
 
 main.wraper .sidebar form .input-group .btn-send {
-  font-family: 'Bebas Neue', cursive;
+  font-family: "CenturyGothic-Bold";
   letter-spacing: 1.2px;
   width: 100%;
   display: block;
@@ -1334,6 +1305,12 @@ main.wraper .sidebar form .input-group .btn-send {
   margin: 10px 0;
   -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1400px) {
+  main.wraper .sidebar form .input-group .btn-send {
+    font-size: 21px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1396,10 +1373,17 @@ main.wraper .sidebar form .check .error {
 
 main.wraper .sidebar form .check #zgodaWiecej, main.wraper .sidebar form .check #zgodaWiecej2 {
   font-size: 12px;
-  line-height: 14px;
+  line-height: 19px;
   font-size: 0.7vw;
   font-family: "CenturyGothic";
   color: #fff;
+}
+
+@media only screen and (max-width: 1400px) {
+  main.wraper .sidebar form .check #zgodaWiecej, main.wraper .sidebar form .check #zgodaWiecej2 {
+    font-size: 12px;
+    font-size: 0.8vw;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -1413,7 +1397,7 @@ main.wraper .sidebar form .check #zgodaWiecej a, main.wraper .sidebar form .chec
 }
 
 main.wraper .sidebar form .check .tooltip {
-  background: rgba(7, 186, 49, 0.8);
+  background: #058924;
   width: 85%;
   right: 0;
   bottom: 29px;
@@ -1451,13 +1435,41 @@ main.wraper .sidebar .links-btn .link-btn:nth-child(1) {
   font-size: 2.8vw;
 }
 
+@media only screen and (max-width: 992px) {
+  main.wraper .sidebar .links-btn .link-btn:nth-child(1) {
+    font-size: 4.8vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main.wraper .sidebar .links-btn .link-btn:nth-child(1) {
+    font-size: 43px;
+  }
+}
+
+main.wraper .sidebar .links-btn .link-btn:nth-child(1) img {
+  width: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+  main.wraper .sidebar .links-btn .link-btn:nth-child(1) img {
+    width: 35px;
+  }
+}
+
 main.wraper .sidebar .links-btn .link-btn:nth-child(2) {
   font-size: 1.8vw;
 }
 
 @media only screen and (max-width: 992px) {
-  main.wraper .sidebar .links-btn .link-btn {
-    font-size: 34px;
+  main.wraper .sidebar .links-btn .link-btn:nth-child(2) {
+    font-size: 3.1vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main.wraper .sidebar .links-btn .link-btn:nth-child(2) {
+    font-size: 29px;
   }
 }
 
@@ -1475,15 +1487,15 @@ main.wraper .container {
 main.wraper .container .top-right-corner .grad {
   position: absolute;
   z-index: 4;
-  margin-left: 40px;
-  top: 40px;
+  margin-left: 30px;
+  top: 30px;
   background: #4fc122;
 }
 
 @media only screen and (max-width: 1200px) {
   main.wraper .container .top-right-corner .grad {
     top: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
   }
 }
 
@@ -1618,16 +1630,9 @@ main.wraper .container .badge {
 main.wraper .container .large-logo {
   position: absolute;
   z-index: 39;
-  bottom: 40px;
+  bottom: 30px;
   width: 28%;
-  right: 40px;
-}
-
-@media only screen and (max-width: 1400px) {
-  main.wraper .container .large-logo {
-    bottom: 20px;
-    margin-left: 20px;
-  }
+  right: 30px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1688,8 +1693,8 @@ main.wraper .container .gallery-top {
 main.wraper .container .gallery-thumbs {
   position: fixed;
   z-index: 3;
-  bottom: 40px;
-  margin-left: 40px;
+  bottom: 20px;
+  margin-left: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 0;

@@ -46,44 +46,10 @@ main.wraper{
                 padding:0px 15px;
             }
           }
-        h1{
-            font-weight: normal;
-            letter-spacing: 3.2px;
-            display:inline-block;
-            // font-size: 3vw;
-            // @media #{$lg} {
-            //    font-size: 46px;
-            // }
-            // @media #{$sm} {
-            //     font-size: 31px;
-            // }
-            @media #{$xs} {
-                font-size: 41px;
-            }
-           
-            margin: 0px;
-            font-size: 53px;
-            font-size: 2.6vw;
-            color:#fff;
-            margin-top: 30px;
-            
-            span{
-                font-size: 33px;
-            }
-        }
-        h2{
-            background-color: $main2;
-            display: inline-block;
-            padding: 10px;
-            margin: 0;
-            font-size: 36px;
-            color:#fff;
-            
-        }
         h3{
             color:#157000;
             font-size: 28px;
-            // letter-spacing: 1.2px;
+            letter-spacing: 1.2px;
             font-family: "CenturyGothic-Bold";
             font-size: 1.5vw;
             margin: 40px 0;
@@ -112,7 +78,7 @@ main.wraper{
                     height: 50px;
                     background-repeat: no-repeat;
                     background-position: center ;
-                    @media #{$md} {
+                    @media #{$lg} {
                         height: 40px;
                     }
                 }
@@ -133,14 +99,14 @@ main.wraper{
                     background:#fff;
                     border:1px solid transparent;
 
-                    font-family: 'Bebas Neue', cursive;
+                   font-family: "CenturyGothic";
                     padding: 0 10px 0 42px;
                     width: 100%;
                     height: 50px;
                     height: 3vw;
                     margin-bottom: 18px;
                     
-                    @media #{$md} {
+                    @media #{$lg} {
                         height: 40px;
                     }
                     &:focus{
@@ -153,7 +119,7 @@ main.wraper{
                 }
                 
                 .btn-send{
-                    font-family: 'Bebas Neue', cursive;
+                    font-family: "CenturyGothic-Bold";
                     letter-spacing: 1.2px;
                     width: 100%;
                     display: block;
@@ -166,6 +132,9 @@ main.wraper{
                     text-align: left;
                     margin: 10px 0;
                     @include shadowBtn;
+                    @media #{$lg} {
+                        font-size: 21px;
+                    }
                     @media #{$xs} {
                         font-size: 32px;
                     }
@@ -218,10 +187,14 @@ main.wraper{
                 
                 #zgodaWiecej, #zgodaWiecej2{
                     font-size: 12px;
-                    line-height: 14px;
+                    line-height: 19px;
                     font-size: 0.7vw;
                     font-family: "CenturyGothic";
                     color: #fff;
+                    @media #{$lg} {
+                        font-size: 12px;
+                        font-size: 0.8vw;
+                    }
                     @media #{$sm} {
                         font-size: 12px;
                     }
@@ -231,7 +204,7 @@ main.wraper{
 
                 }
                 .tooltip{
-                    background: rgba($main, .8);
+                    background: darken($main, 10);
                     width: 85%;
                     right: 0;
                     bottom: 29px;
@@ -259,18 +232,33 @@ main.wraper{
             .link-btn{
                 font-family: "CenturyGothic-Bold";
                 text-decoration: none;
-
                 color:#fff;
                 display: block;
                 &:nth-child(1){
                     font-size: 2.8vw;
+                    @media #{$sm}  {
+                        font-size: 4.8vw;
+                    }
+                    @media #{$xs}  {
+                        font-size: 43px;
+                    }
+                    img{
+                        width: 10%;
+                        @media #{$xs}  {
+                            width: 35px;
+                        }
+                    }
                 }
                 &:nth-child(2){
                     font-size: 1.8vw;
+                    @media #{$sm}  {
+                        font-size: 3.1vw;
+                    }
+                    @media #{$xs}  {
+                        font-size: 29px;
+                    }
                 }
-                @media #{$sm} {
-                    font-size: 34px
-                }
+               
                 &:hover{
                     transition: all 0.1s;
                    color:#157000;
@@ -287,12 +275,12 @@ main.wraper{
            .grad{
             position: absolute;
             z-index: 4;
-            margin-left: 40px;
-            top: 40px;
+            margin-left: 30px;
+            top: 30px;
                 background: rgb(79,193,34);
                 @media #{$md} {
                     top: 20px;
-                    margin-left: 20px;
+                    margin-left: 10px;
                 }
                 @media #{$sm} {
                     // left: 10px;
@@ -390,13 +378,13 @@ main.wraper{
         .large-logo{
             position: absolute;
             z-index: 39;
-            bottom:40px;
+            bottom:30px;
             width: 28%;
-            right: 40px;
-            @media #{$lg} {
-                bottom:20px;
-                margin-left: 20px;
-            }
+            right: 30px;
+            // @media #{$lg} {
+            //     bottom:20px;
+            //     margin-left: 20px;
+            // }
             @media #{$md} {
                 margin-left: 0px;
                 bottom: 140px;
@@ -444,9 +432,9 @@ main.wraper{
           .gallery-thumbs {
             position: fixed;
             z-index: 3;
-            bottom: 40px;
+            bottom: 20px;
             // left:0px;
-            margin-left: 40px;
+            margin-left: 30px;
             box-sizing: border-box;
             padding: 10px 0;
             max-width: 35%;
